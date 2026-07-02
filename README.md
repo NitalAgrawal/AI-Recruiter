@@ -2,6 +2,7 @@
 
 An intelligent recruitment platform powered by Google Gemini AI. Automates candidate sourcing, resume parsing, semantic matching, ranking, and interview planning.
 
+Live: https://ai-recruiter-ochre.vercel.app/
 ## Project Structure
 
 ```
