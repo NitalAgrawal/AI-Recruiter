@@ -1,0 +1,51 @@
+{
+  "generatedAt": "2026-07-02T07:47:55.196Z",
+  "mode": "dev",
+  "limit": 500,
+  "datasetPath": "E:\\AI-Recruitment-System\\backend\\data\\India_runs_data_and_ai_challenge",
+  "filesProcessed": [
+    {
+      "file": "candidates.jsonl",
+      "format": "JSONL",
+      "sizeMB": "464.69",
+      "recordsProcessed": 500
+    }
+  ],
+  "summary": {
+    "totalRecords": 500,
+    "imported": 500,
+    "duplicatesSkipped": 0,
+    "validationErrors": 0
+  },
+  "collections": {
+    "users": {
+      "upserted": 500,
+      "matched": 0
+    },
+    "candidateProfiles": {
+      "upserted": 500,
+      "matched": 0
+    },
+    "resumeVersions": {
+      "upserted": 500,
+      "matched": 0
+    },
+    "datasetCandidates": {
+      "upserted": 0,
+      "matched": 500
+    }
+  },
+  "fieldAnalysis": {
+    "missingLocation": 0,
+    "missingSkills": 0,
+    "missingCareerHistory": 0,
+    "missingCertifications": 371
+  },
+  "inconsistencies": [],
+  "processingTimeMs": 5500,
+  "memoryUsageMB": {
+    "rssStart": "78.1",
+    "rssEnd": "177.2",
+    "heapUsedEnd": "55.2"
+  }
+}

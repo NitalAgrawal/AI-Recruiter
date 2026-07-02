@@ -1,0 +1,22 @@
+{
+  "name": "ai-recruiter",
+  "version": "1.0.0",
+  "description": "AI-Recruiter — AI-Powered Recruitment Platform (monorepo root)",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently --kill-others-on-fail --names \"FRONTEND,BACKEND\" --prefix-colors \"cyan,yellow\" \"npm run frontend\" \"npm run backend\"",
+    "frontend": "npm run dev --prefix frontend",
+    "backend": "npm run dev --prefix backend",
+    "start": "concurrently --kill-others-on-fail --names \"FRONTEND,BACKEND\" --prefix-colors \"cyan,yellow\" \"npm run start --prefix frontend\" \"npm run start --prefix backend\"",
+    "install:all": "npm install && npm install --prefix frontend && npm install --prefix backend",
+    "build": "npm run build --prefix frontend",
+    "db:import-dev": "node backend/scripts/importDataset.js --mode=dev",
+    "db:import-prod": "node backend/scripts/importDataset.js --mode=prod",
+    "db:seed": "node backend/scripts/seedRecruiterAndJob.js && node backend/scripts/seedApplications.js",
+    "db:run-ai": "node backend/scripts/runAIPipeline.js",
+    "db:reset": "node backend/scripts/resetDatabase.js"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
