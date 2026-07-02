@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Briefcase, Building2, MapPin, Clock, ChevronRight, Trash2, AlertTriangle } from 'lucide-react'
-import api from '../services/api'
+import api, { BACKEND_URL } from '../services/api'
 import { Heading3, Heading4 } from '../design-system/Typography'
 import Card from '../design-system/Card'
 import Badge from '../design-system/Badge'
@@ -112,7 +112,7 @@ export default function MyApplications() {
           {applications.map((app) => {
             const job = app.job || {}
             const company = job.companyProfile?.companyName || 'Company'
-            const logoUrl = job.companyProfile?.companyLogo ? `http://localhost:5000${job.companyProfile.companyLogo}` : null
+            const logoUrl = job.companyProfile?.companyLogo ? `${BACKEND_URL}${job.companyProfile.companyLogo}` : null
             const canWithdraw = !['Hired', 'Interview Scheduled', 'Rejected'].includes(app.status)
 
             return (
@@ -158,7 +158,7 @@ export default function MyApplications() {
                   <div className="flex items-center justify-between px-5 py-3 border-t border-white/[0.04] bg-black/20">
                     {app.resumeFile ? (
                       <a
-                        href={`http://localhost:5000${app.resumeFile}`}
+                        href={`${BACKEND_URL}${app.resumeFile}`}
                         target="_blank"
                         rel="noreferrer"
                         className="text-xs text-gold font-bold hover:underline flex items-center gap-1.5"

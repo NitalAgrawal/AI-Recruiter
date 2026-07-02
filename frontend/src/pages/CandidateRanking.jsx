@@ -5,7 +5,7 @@ import {
   ArrowLeft, Download, Trophy, Star, Briefcase, Book, Cpu,
   ThumbsUp, ThumbsDown, CheckCircle, Search, FileText, MessageSquare, Calendar
 } from 'lucide-react'
-import api from '../services/api'
+import api, { BACKEND_URL } from '../services/api'
 import { Heading3, Heading4 } from '../design-system/Typography'
 import Card from '../design-system/Card'
 import Button from '../design-system/Button'
@@ -212,7 +212,7 @@ export default function CandidateRanking() {
 
                         {app.resumeFile && (
                           <a 
-                            href={`http://localhost:5000${app.resumeFile}`} 
+                            href={`${BACKEND_URL}${app.resumeFile}`} 
                             target="_blank" rel="noreferrer"
                             className="flex items-center gap-2 px-4 py-2 bg-white/[0.04] border border-white/[0.08] rounded-xl text-sm font-bold text-white hover:bg-white/[0.08] transition-colors w-full justify-center"
                           >

@@ -5,7 +5,7 @@ import {
   ArrowLeft, Download, FileText, User, MapPin, Briefcase,
   Clock, ChevronDown, CheckCircle2, StickyNote, Cpu, MessageSquare, Trophy
 } from 'lucide-react'
-import api from '../services/api'
+import api, { BACKEND_URL } from '../services/api'
 import { Heading3, Heading4, Label } from '../design-system/Typography'
 import Card from '../design-system/Card'
 import Button from '../design-system/Button'
@@ -61,8 +61,8 @@ function ApplicantRow({ app, onStatusChange, onNoteSave, onOpenSemanticMatch }) 
   }
 
   const resumeUrl = app.resumeFile
-    ? `http://localhost:5000${app.resumeFile}`
-    : (profile.resume?.fileUrl ? `http://localhost:5000${profile.resume.fileUrl}` : null)
+    ? `${BACKEND_URL}${app.resumeFile}`
+    : (profile.resume?.fileUrl ? `${BACKEND_URL}${profile.resume.fileUrl}` : null)
 
   return (
     <Card hover={false} className="!p-0 overflow-hidden">

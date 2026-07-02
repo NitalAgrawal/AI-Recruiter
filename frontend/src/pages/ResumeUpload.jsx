@@ -6,7 +6,7 @@ import {
   ChevronDown, ChevronUp, User, Code2, Briefcase, GraduationCap,
   FolderOpen, Award, Link2, Clock, History, Download, Zap
 } from 'lucide-react'
-import api from '../services/api'
+import api, { BACKEND_URL } from '../services/api'
 import { Heading3, Heading4, Label } from '../design-system/Typography'
 import Card from '../design-system/Card'
 import Button from '../design-system/Button'
@@ -418,7 +418,7 @@ export default function ResumeUpload() {
                 </div>
                 <div className="flex items-center gap-2 shrink-0">
                   <a
-                    href={`http://localhost:5000${selectedVersion.fileUrl}`}
+                    href={`${BACKEND_URL}${selectedVersion.fileUrl}`}
                     target="_blank" rel="noreferrer"
                     className="p-2 rounded-lg border border-white/[0.08] bg-white/[0.04] text-text-muted hover:text-white hover:border-white/20 transition-all"
                     title="Download"

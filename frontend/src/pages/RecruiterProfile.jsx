@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useAuth } from '../contexts/AuthContext';
-import api from '../services/api';
+import api, { BACKEND_URL } from '../services/api';
 import { 
   Save, UploadCloud, Building2, MapPin, Briefcase, 
   Users, CheckCircle2, AlertCircle, Plus, Trash2, X, Globe, Mail, Phone
@@ -194,7 +194,7 @@ export default function RecruiterProfile() {
             <div className="relative group mb-4">
               <div className="w-32 h-32 rounded-2xl overflow-hidden bg-white/5 border border-white/10 flex items-center justify-center shadow-lg relative">
                 {formData.companyLogo ? (
-                  <img src={`http://localhost:5000${formData.companyLogo}`} alt="Company Logo" className="w-full h-full object-cover" />
+                  <img src={`${BACKEND_URL}${formData.companyLogo}`} alt="Company Logo" className="w-full h-full object-cover" />
                 ) : (
                   <Building2 size={40} className="text-white/20" />
                 )}

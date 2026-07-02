@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import Badge from '../design-system/Badge'
 import Button from '../design-system/Button'
 import { useAuth } from '../contexts/AuthContext'
+import { BACKEND_URL } from '../services/api'
 
 const statusColor = (status) => {
   switch (status) {
@@ -31,7 +32,7 @@ export default function JobCard({ job, onClone, onStatusChange, onDelete, onAppl
 
   const company = companyProfile?.companyName || 'Company'
   const logoUrl = companyProfile?.companyLogo
-    ? `http://localhost:5000${companyProfile.companyLogo}`
+    ? `${BACKEND_URL}${companyProfile.companyLogo}`
     : null
 
   return (

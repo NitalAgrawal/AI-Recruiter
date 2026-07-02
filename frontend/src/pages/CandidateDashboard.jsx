@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useAuth } from '../contexts/AuthContext';
-import api from '../services/api';
+import api, { BACKEND_URL } from '../services/api';
 import { 
   Save, UploadCloud, User, MapPin, Briefcase, FileText, 
   Code, Award, CheckCircle2, AlertCircle, Plus, Trash2, X
@@ -198,7 +198,7 @@ export default function CandidateDashboard() {
         <div className="xl:col-span-1 space-y-6 xl:sticky xl:top-36 self-start">
           <Card className="flex flex-col items-center text-center">
             <div className="relative group mb-4">
-              <Avatar name={user?.fullName} size="xl" src={formData.profilePhotoUrl ? `http://localhost:5000${formData.profilePhotoUrl}` : null} />
+              <Avatar name={user?.fullName} size="xl" src={formData.profilePhotoUrl ? `${BACKEND_URL}${formData.profilePhotoUrl}` : null} />
               <label className="absolute inset-0 flex items-center justify-center bg-black/60 rounded-full opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer backdrop-blur-sm border-2 border-dashed border-gold/50">
                 <UploadCloud size={20} className="text-white" />
                 <input type="file" accept="image/*" className="hidden" onChange={(e) => handleFileUpload(e, 'avatar')} />

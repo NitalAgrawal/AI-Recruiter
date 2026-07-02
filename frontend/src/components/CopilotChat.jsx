@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { MessageSquare, Send, X, Bot, User, Loader2, Sparkles, ChevronDown } from 'lucide-react'
+import { BACKEND_URL } from '../services/api'
 
 const SUGGESTED_PROMPTS = [
   "Recommend the top 3 candidates for this job.",
@@ -35,7 +36,7 @@ export default function CopilotChat({ jobId, isOpen, onClose }) {
 
     try {
       const token = localStorage.getItem('token')
-      const response = await fetch(`http://localhost:5000/api/copilot/job/${jobId}`, {
+      const response = await fetch(`${BACKEND_URL}/api/copilot/job/${jobId}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
