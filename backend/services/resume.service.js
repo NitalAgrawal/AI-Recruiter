@@ -46,6 +46,14 @@ exports.uploadAndParse = async (candidateUserId, file, applicationId = null) => 
     parsingStatus: 'Processing'
   });
 
+  // Sync basic resume info to CandidateProfile SYNCHRONOUSLY so the frontend knows it was uploaded immediately
+  await CandidateProfile.findByIdAndUpdate(profile._id, {
+    'resume.uploaded': true,
+    'resume.fileUrl': fileUrl,
+    'resume.originalFileName': file.originalname,
+    'resume.uploadedAt': new Date(),
+  });
+
   // Extract and parse asynchronously (non-blocking parse in background)
   setImmediate(async () => {
     try {
@@ -75,14 +83,10 @@ exports.uploadAndParse = async (candidateUserId, file, applicationId = null) => 
         });
       }
 
-      // Update profile resume metadata
+      // Update parsed status
       await CandidateProfile.findByIdAndUpdate(profile._id, {
-        'resume.uploaded': true,
-        'resume.fileUrl': fileUrl,
-        'resume.originalFileName': file.originalname,
         'resume.parsed': true,
         'resume.parsedText': rawText.substring(0, 5000),
-        'resume.uploadedAt': new Date(),
         'resume.parserVersion': PARSER_VERSION
       });
 

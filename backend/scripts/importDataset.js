@@ -61,7 +61,7 @@ const JSON_FILE  = path.join(DATA_DIR, 'sample_candidates.json');
 const REPORT_PATH = path.resolve(__dirname, 'import_report.json');
 
 // Default hashed password for all imported users
-const DATASET_DEFAULT_PASSWORD = 'Dataset@TalentAI2024';
+const DATASET_DEFAULT_PASSWORD = 'Dataset@AI-Recruiter2024';
 let HASHED_PASSWORD;  // computed once before import loop
 
 // ── Field Mappers ─────────────────────────────────────────────────────────────
@@ -94,10 +94,10 @@ function mapWorkMode(raw) {
 
 /**
  * Derive a deterministic, unique email from candidate_id.
- * Format: cand0000001@talentai.dataset
+ * Format: cand0000001@ai-recruiter.dataset
  */
 function deriveEmail(candidateId) {
-  return `${candidateId.toLowerCase().replace('_', '')}@talentai.org`;
+  return `${candidateId.toLowerCase().replace('_', '')}@ai-recruiter.org`;
 }
 
 /**
@@ -689,7 +689,7 @@ async function main() {
 
   console.log('');
   console.log('╔══════════════════════════════════════════════════════╗');
-  console.log('║        TalentAI — Dataset Import Script              ║');
+  console.log('║        AI-Recruiter — Dataset Import Script              ║');
   console.log('╚══════════════════════════════════════════════════════╝');
   console.log(`  Mode  : ${MODE.toUpperCase()} (limit: ${LIMIT === Infinity ? 'ALL records' : LIMIT + ' records'})`);
   console.log(`  DB    : ${process.env.MONGO_URI?.replace(/\/\/[^:]+:[^@]+@/, '//***:***@') || 'not set'}`);

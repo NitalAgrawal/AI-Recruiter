@@ -93,7 +93,7 @@ export default function Analytics() {
       const pdfWidth = pdf.internal.pageSize.getWidth()
       const pdfHeight = (canvas.height * pdfWidth) / canvas.width
       pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight)
-      pdf.save('talentai-analytics.pdf')
+      pdf.save('ai-recruiter-analytics.pdf')
     } catch (err) {
       console.error('Export failed', err)
     }

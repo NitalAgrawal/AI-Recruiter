@@ -19,14 +19,20 @@ const storage = multer.diskStorage({
   },
 });
 
-// File filter (optional, can be expanded for specific types)
+// File filter
 const fileFilter = (req, file, cb) => {
-  // Allow PDFs and Images
-  const allowedMimeTypes = ['application/pdf', 'image/jpeg', 'image/png', 'image/webp'];
+  // Allow PDFs, DOCX, and Images
+  const allowedMimeTypes = [
+    'application/pdf',
+    'application/vnd.openxmlformats-officedocument.wordprocessingml.document', // .docx
+    'image/jpeg',
+    'image/png',
+    'image/webp'
+  ];
   if (allowedMimeTypes.includes(file.mimetype)) {
     cb(null, true);
   } else {
-    cb(new Error('Invalid file type. Only PDF, JPG, PNG, and WebP are allowed.'));
+    cb(new Error('Invalid file type. Only PDF, DOCX, JPG, PNG, and WebP are allowed.'));
   }
 };
 

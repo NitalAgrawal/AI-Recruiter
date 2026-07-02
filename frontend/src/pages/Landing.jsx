@@ -73,9 +73,9 @@ const STEPS = [
 ]
 
 const TESTIMONIALS = [
-  { name: 'Elena Vasquez', role: 'VP of Talent, Stripe', quote: 'TalentAI cut our time-to-hire from 6 weeks to 9 days. The quality of shortlisted candidates improved dramatically.', rating: 5, avatar: 'Elena Vasquez' },
+  { name: 'Elena Vasquez', role: 'VP of Talent, Stripe', quote: 'AI-Recruiter cut our time-to-hire from 6 weeks to 9 days. The quality of shortlisted candidates improved dramatically.', rating: 5, avatar: 'Elena Vasquez' },
   { name: 'Marcus Webb', role: 'CTO, Notion', quote: 'The AI interview analysis is uncanny. It surfaces insights about candidates that take our humans weeks to discover.', rating: 5, avatar: 'Marcus Webb' },
-  { name: 'Priya Nair', role: 'Head of People, Figma', quote: 'We\'ve built our most diverse engineering team ever. TalentAI\'s bias-free screening is genuinely game-changing.', rating: 5, avatar: 'Priya Nair' },
+  { name: 'Priya Nair', role: 'Head of People, Figma', quote: 'We\'ve built our most diverse engineering team ever. AI-Recruiter\'s bias-free screening is genuinely game-changing.', rating: 5, avatar: 'Priya Nair' },
   { name: 'David Park', role: 'Talent Director, OpenAI', quote: 'Best recruitment investment we\'ve made. The analytics alone justify the cost, and the time savings are enormous.', rating: 5, avatar: 'David Park' },
 ]
 
@@ -97,7 +97,7 @@ export default function Landing() {
             <Zap size={16} className="text-primary" fill="currentColor" />
           </div>
           <div>
-            <span className="text-base font-black text-white tracking-tight leading-none block group-hover:text-gold transition-colors">TalentAI</span>
+            <span className="text-base font-black text-white tracking-tight leading-none block group-hover:text-gold transition-colors">AI-Recruiter</span>
           </div>
         </div>
         <div className="hidden md:flex items-center gap-10 text-sm font-semibold text-text-secondary">
@@ -131,7 +131,7 @@ export default function Landing() {
           </motion.h1>
 
           <motion.p variants={fadeUp} className="text-lg md:text-xl text-text-secondary max-w-2xl mx-auto mb-12 leading-relaxed font-medium">
-            TalentAI automates candidate sourcing, screening, and interviewing — 
+            AI-Recruiter automates candidate sourcing, screening, and interviewing — 
             so your team focuses on building relationships, not reading résumés.
           </motion.p>
 
@@ -153,7 +153,7 @@ export default function Landing() {
                 <div className="w-3 h-3 rounded-full bg-white/20" />
                 <div className="w-3 h-3 rounded-full bg-white/20" />
                 <div className="ml-4 flex-1 bg-white/[0.03] rounded-md px-3 py-1.5 text-xs text-text-muted text-left font-mono border border-white/[0.02]">
-                  app.talentai.io/dashboard
+                  app.ai-recruiter.io/dashboard
                 </div>
               </div>
               <div className="p-8 grid grid-cols-2 md:grid-cols-4 gap-6 bg-gradient-to-b from-transparent to-black/40">
@@ -299,7 +299,7 @@ export default function Landing() {
                 Ready to transform<br />your <GoldText>hiring process?</GoldText>
               </Heading2>
               <Body muted className="mb-10 max-w-lg mx-auto">
-                Join 12,000+ companies that hire faster, smarter, and more equitably with TalentAI.
+                Join 12,000+ companies that hire faster, smarter, and more equitably with AI-Recruiter.
               </Body>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Button size="xl" rightIcon={<ArrowRight size={18} />} onClick={() => navigate('/dashboard')} className="shadow-gold w-full sm:w-auto">
@@ -322,9 +322,9 @@ export default function Landing() {
             <div className="w-8 h-8 rounded-xl bg-gold/10 border border-gold/20 flex items-center justify-center">
               <Zap size={16} className="text-gold" fill="currentColor" />
             </div>
-            <span className="text-lg font-black text-white">TalentAI</span>
+            <span className="text-lg font-black text-white">AI-Recruiter</span>
           </div>
-          <p className="text-sm font-medium text-text-muted">© 2026 TalentAI Inc. All rights reserved.</p>
+          <p className="text-sm font-medium text-text-muted">© 2026 AI-Recruiter Inc. All rights reserved.</p>
           <div className="flex gap-8 text-sm font-semibold text-text-muted">
             {['Privacy', 'Terms', 'Security', 'Status'].map((t) => (
               <a key={t} href="#" className="hover:text-white transition-colors">{t}</a>

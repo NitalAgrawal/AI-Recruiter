@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import {
   Users, Briefcase, MessageSquare, TrendingUp,
@@ -56,6 +57,8 @@ const stagger = { show: { transition: { staggerChildren: 0.1 } } }
 const fadeUp  = { hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 300, damping: 24 } } }
 
 export default function Dashboard() {
+  const navigate = useNavigate()
+
   return (
     <div className="space-y-8 animate-page-in">
       <header className="mb-2">
@@ -149,7 +152,11 @@ export default function Dashboard() {
             </Card.Header>
             <div className="space-y-4">
               {UPCOMING.map(({ candidate, role, time, type, avatar }) => (
-                <div key={candidate} className="flex items-center gap-4 p-4 rounded-xl bg-black/20 border border-white/[0.04] hover:border-gold/20 hover:bg-white/[0.02] transition-all cursor-pointer group relative overflow-hidden">
+                <div 
+                  key={candidate} 
+                  onClick={() => navigate('/interview')}
+                  className="flex items-center gap-4 p-4 rounded-xl bg-black/20 border border-white/[0.04] hover:border-gold/20 hover:bg-white/[0.02] transition-all cursor-pointer group relative overflow-hidden"
+                >
                   <div className="absolute left-0 inset-y-0 w-1 bg-gold scale-y-0 group-hover:scale-y-100 transition-transform origin-bottom" />
                   <Avatar name={avatar} size="md" />
                   <div className="flex-1 min-w-0">

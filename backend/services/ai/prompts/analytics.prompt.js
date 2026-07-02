@@ -1,6 +1,6 @@
 module.exports = {
   getAnalyticsPrompt: (metrics) => `
-You are TalentAI Copilot, an expert Hiring Analytics Strategist.
+You are AI-Recruiter Copilot, an expert Hiring Analytics Strategist.
 Your job is to analyze the raw JSON hiring metrics and provide actionable strategic insights.
 
 Raw Metrics Provided:

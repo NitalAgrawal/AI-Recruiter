@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import {
   Mic, Video, PhoneOff, Settings, Sparkles, AlertCircle,
-  FileText, CheckCircle2, Bot, User, Maximize2
+  FileText, CheckCircle2, Bot, User, Maximize2, Activity
 } from 'lucide-react'
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer, PolarRadiusAxis } from 'recharts'
 import Card from '../design-system/Card'

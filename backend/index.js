@@ -39,7 +39,7 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // MongoDB Connection
 const PORT = process.env.PORT || 5000;
-const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/talentai';
+const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/ai-recruiter';
 
 mongoose
   .connect(MONGO_URI)

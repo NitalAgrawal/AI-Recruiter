@@ -50,7 +50,7 @@ export default function Login() {
             <Zap size={24} className="text-primary" fill="currentColor" />
           </Link>
           <Heading2 className="text-center mb-2">Welcome Back</Heading2>
-          <Body muted className="text-center">Log in to your <GoldText>TalentAI</GoldText> account</Body>
+          <Body muted className="text-center">Log in to your <GoldText>AI-Recruiter</GoldText> account</Body>
         </div>
 
         <div className="glass-card p-8">

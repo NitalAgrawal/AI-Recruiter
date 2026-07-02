@@ -53,7 +53,7 @@ export default function Register() {
             <Zap size={24} className="text-primary" fill="currentColor" />
           </Link>
           <Heading2 className="text-center mb-2">Create Account</Heading2>
-          <Body muted className="text-center">Join <GoldText>TalentAI</GoldText> and hire smarter</Body>
+          <Body muted className="text-center">Join <GoldText>AI-Recruiter</GoldText> and hire smarter</Body>
         </div>
 
         <div className="glass-card p-8">

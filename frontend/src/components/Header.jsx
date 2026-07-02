@@ -10,14 +10,14 @@ const PAGE_TITLES = {
   '/dashboard':  { title: 'Dashboard',    sub: "Here's what's happening with your candidates today." },
   '/candidates': { title: 'Candidates',   sub: 'Manage and track applicants across all open roles.' },
   '/jobs':       { title: 'Job Listings', sub: 'Monitor active openings and pipeline health.' },
-  '/interview':  { title: 'AI Interview', sub: 'Live assessment sessions powered by TalentAI.' },
+  '/interview':  { title: 'AI Interview', sub: 'Live assessment sessions powered by AI-Recruiter.' },
   '/reports':    { title: 'Reports',      sub: 'Advanced analytics and recruitment insights.' },
   '/settings':   { title: 'Settings',     sub: 'Manage your account and workspace preferences.' },
 }
 
 export default function Header({ onSearch }) {
   const { pathname } = useLocation()
-  const page = PAGE_TITLES[pathname] || { title: 'TalentAI', sub: '' }
+  const page = PAGE_TITLES[pathname] || { title: 'AI-Recruiter', sub: '' }
   const [query, setQuery] = useState('')
   const { user } = useAuth()
 

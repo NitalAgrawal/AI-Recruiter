@@ -6,7 +6,7 @@
  *
  * Removes:
  *   - All imported dataset candidates (from DatasetCandidate)
- *   - Dataset-derived users (emails ending in @talentai.org / @airecruiter.org)
+ *   - Dataset-derived users (emails ending in @ai-recruiter.org / @airecruiter.org)
  *   - Seeded recruiter user (talent@redrob.org / talent@redrob.dataset)
  *   - Linked CandidateProfile & ResumeVersion documents
  *   - Seeded jobs (Senior AI/ML Engineer) and all applications for those jobs
@@ -60,9 +60,9 @@ async function main() {
   // 2. Identify and delete dataset-derived users and seeded recruiter
   const userQuery = {
     $or: [
-      { email: /@talentai\.org$/i },
+      { email: /@ai-recruiter\.org$/i },
       { email: /@airecruiter\.org$/i },
-      { email: /@talentai\.dataset$/i },
+      { email: /@ai-recruiter\.dataset$/i },
       { email: 'talent@redrob.org' },
       { email: 'talent@redrob.dataset' }
     ]

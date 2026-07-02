@@ -1,4 +1,4 @@
-# TalentAI — AI-Powered Recruitment Platform
+# AI-Recruiter — AI-Powered Recruitment Platform
 
 An intelligent recruitment platform powered by Google Gemini AI. Automates candidate sourcing, resume parsing, semantic matching, ranking, and interview planning.
 
@@ -54,7 +54,7 @@ npm run install:all
 **Backend** — edit `backend/.env`:
 ```env
 PORT=5000
-MONGO_URI=mongodb://localhost:27017/talentai
+MONGO_URI=mongodb://localhost:27017/ai-recruiter
 JWT_SECRET=your_jwt_secret
 JWT_EXPIRES_IN=30d
 GEMINI_API_KEY=your_gemini_api_key

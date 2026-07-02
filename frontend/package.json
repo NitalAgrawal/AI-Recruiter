@@ -1,5 +1,5 @@
 {
-  "name": "talentai-frontend",
+  "name": "ai-recruiter-frontend",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -24,6 +24,7 @@
     "postcss": "^8.5.16",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
+    "react-dropzone": "^15.0.0",
     "react-router-dom": "^7.18.1",
     "recharts": "^3.9.1",
     "tailwindcss": "^3.4.19"

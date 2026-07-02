@@ -36,7 +36,6 @@ export default function App() {
           <Route element={<Layout />}>
             <Route path="/dashboard"  element={<Dashboard />} />
             <Route path="/candidates" element={<Candidates />} />
-            <Route path="/jobs"         element={<Jobs />} />
             <Route path="/jobs/create"   element={<CreateJob />} />
             <Route path="/jobs/edit/:id" element={<CreateJob />} />
             <Route path="/interview"     element={<Interview />} />
@@ -52,9 +51,9 @@ export default function App() {
         <Route element={<ProtectedRoute allowedRoles={['Candidate']} />}>
           <Route element={<Layout />}>
             <Route path="/candidate-dashboard" element={<CandidateDashboard />} />
-            <Route path="/jobs" element={<Jobs />} />
-            <Route path="/my-applications" element={<MyApplications />} />
-            <Route path="/resume" element={<ResumeUpload />} />
+            <Route path="/candidate-profile"   element={<CandidateDashboard />} />
+            <Route path="/my-applications"     element={<MyApplications />} />
+            <Route path="/resume"              element={<ResumeUpload />} />
           </Route>
         </Route>
 
@@ -62,6 +61,13 @@ export default function App() {
         <Route element={<ProtectedRoute allowedRoles={['Admin']} />}>
           <Route element={<Layout />}>
             <Route path="/admin" element={<AdminDashboard />} />
+          </Route>
+        </Route>
+
+        {/* Shared authenticated routes */}
+        <Route element={<ProtectedRoute allowedRoles={['Recruiter', 'Admin', 'Candidate']} />}>
+          <Route element={<Layout />}>
+            <Route path="/jobs" element={<Jobs />} />
           </Route>
         </Route>
 

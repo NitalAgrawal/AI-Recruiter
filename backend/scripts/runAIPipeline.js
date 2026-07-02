@@ -173,7 +173,7 @@ function simulateRanking(semanticResult, profile, signalBoost) {
 
 async function main() {
   console.log('\n╔══════════════════════════════════════════════════════╗');
-  console.log('║             TalentAI — Run AI Pipeline               ║');
+  console.log('║             AI-Recruiter — Run AI Pipeline               ║');
   console.log('╚══════════════════════════════════════════════════════╝\n');
 
   const MONGO_URI = process.env.MONGO_URI;

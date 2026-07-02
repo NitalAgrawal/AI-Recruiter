@@ -12,7 +12,7 @@ const SUGGESTED_PROMPTS = [
 
 export default function CopilotChat({ jobId, isOpen, onClose }) {
   const [messages, setMessages] = useState([
-    { role: 'ai', text: 'Hi! I am TalentAI Copilot. Ask me to compare candidates, generate interview questions, or explain AI rankings.' }
+    { role: 'ai', text: 'Hi! I am AI-Recruiter Copilot. Ask me to compare candidates, generate interview questions, or explain AI rankings.' }
   ])
   const [input, setInput] = useState('')
   const [isTyping, setIsTyping] = useState(false)
@@ -138,7 +138,7 @@ export default function CopilotChat({ jobId, isOpen, onClose }) {
                 <Sparkles size={16} className="text-black" />
               </div>
               <div>
-                <h3 className="font-bold text-white text-sm">TalentAI Copilot</h3>
+                <h3 className="font-bold text-white text-sm">AI-Recruiter Copilot</h3>
                 <p className="text-[10px] text-text-muted">Job-aware intelligent assistant</p>
               </div>
             </div>

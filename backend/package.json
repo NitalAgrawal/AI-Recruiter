@@ -1,7 +1,7 @@
 {
-  "name": "talentai-backend",
+  "name": "ai-recruiter-backend",
   "version": "1.0.0",
-  "description": "TalentAI — Node/Express API server",
+  "description": "AI-Recruiter — Node/Express API server",
   "main": "index.js",
   "type": "commonjs",
   "scripts": {

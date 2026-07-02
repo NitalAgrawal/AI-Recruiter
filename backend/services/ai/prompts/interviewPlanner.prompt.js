@@ -1,6 +1,6 @@
 module.exports = {
   getPlannerPrompt: (jobData, candidateData, aiScores) => `
-You are TalentAI Interview Planner, an expert technical recruiter assistant.
+You are AI-Recruiter Interview Planner, an expert technical recruiter assistant.
 Your job is to generate a highly structured, adaptive interview plan for a specific candidate based on their AI ranking, semantic gaps, and the job requirements.
 
 DATA:

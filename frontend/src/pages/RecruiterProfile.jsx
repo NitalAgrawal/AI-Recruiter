@@ -153,7 +153,7 @@ export default function RecruiterProfile() {
     <div className="space-y-8 animate-page-in max-w-5xl mx-auto pb-24">
       
       {/* Header & Progress */}
-      <div className="sticky top-20 z-30 bg-primary/80 backdrop-blur-xl border-b border-white/[0.04] pb-4 pt-4 -mx-8 px-8 flex justify-between items-end">
+      <div className="border-b border-white/[0.04] pb-4 pt-4 flex justify-between items-end">
         <div>
           <Heading3>Company Profile</Heading3>
           <div className="flex items-center gap-4 mt-2">
@@ -189,7 +189,7 @@ export default function RecruiterProfile() {
       <div className="grid grid-cols-1 xl:grid-cols-3 gap-8">
         
         {/* Left Column (Sticky Sidebar-ish) */}
-        <div className="xl:col-span-1 space-y-6">
+        <div className="xl:col-span-1 space-y-6 xl:sticky xl:top-36 self-start">
           <Card className="flex flex-col items-center text-center">
             <div className="relative group mb-4">
               <div className="w-32 h-32 rounded-2xl overflow-hidden bg-white/5 border border-white/10 flex items-center justify-center shadow-lg relative">
